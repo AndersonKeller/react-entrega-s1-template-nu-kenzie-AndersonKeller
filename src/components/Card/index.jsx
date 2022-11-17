@@ -1,7 +1,10 @@
 export function Card({ transaction }) {
+  console.log(transaction);
   return (
     <ul>
-      <li>{transaction}</li>
+      {transaction.map((trans, index) => {
+        return <li key={index}>{trans}</li>;
+      })}
     </ul>
   );
 }
