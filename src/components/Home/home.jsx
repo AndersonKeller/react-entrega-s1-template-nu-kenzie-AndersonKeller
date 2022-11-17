@@ -10,26 +10,7 @@ export function Home({ setUser }) {
     { description: "Salário recebido", type: "entrada", value: 2500 },
     { description: "Conta de luz", type: "saída", value: -150 },
   ]);
-  const [typeIn, setTypeIn] = useState([]);
-  const [typeOut, setTypeOut] = useState([]);
-
-  function filterIn([...list]) {
-    const res = list.filter((trans) => {
-      return trans.type === "entrada";
-    });
-    setTypeIn(res);
-    return typeIn;
-  }
-
-  function filterOut(list) {
-    const res = list.filter((trans) => {
-      return trans.type === "saída";
-    });
-    setTypeOut(res);
-    return typeOut;
-  }
-  console.log(typeIn);
-  console.log(typeOut);
+  // localStorage.setItem("list", JSON.stringify(listTransaction));
   return (
     <div>
       <Header setUser={setUser} />
@@ -51,6 +32,7 @@ export function Home({ setUser }) {
             <button
               onClick={() => (
                 <List
+                  setListTransaction={setListTransactions}
                   list={setListTransactions(
                     JSON.parse(localStorage.getItem("list")).filter((el) => {
                       return el.type === "entrada";
@@ -64,6 +46,7 @@ export function Home({ setUser }) {
             <button
               onClick={() => (
                 <List
+                  setListTransaction={setListTransactions}
                   list={setListTransactions(
                     JSON.parse(localStorage.getItem("list")).filter((el) => {
                       return el.type === "saída";
@@ -75,7 +58,14 @@ export function Home({ setUser }) {
               Saídas
             </button>
           </div>
-          <ul>{<List list={listTransaction} />}</ul>
+          <ul>
+            {
+              <List
+                list={listTransaction}
+                setListTransaction={setListTransactions}
+              />
+            }
+          </ul>
         </div>
 
         <TotalMoney listTransactions={listTransaction} />

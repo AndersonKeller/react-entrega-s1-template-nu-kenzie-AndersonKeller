@@ -13,7 +13,6 @@ export function Form({ listTransactions, setListTransactions }) {
             ...listTransactions,
             { value: userValue, description: userDesc, type: userType },
           ]);
-          localStorage.setItem("list", JSON.stringify(listTransactions));
         }}
       >
         <label htmlFor="">Descrição</label>
@@ -48,7 +47,12 @@ export function Form({ listTransactions, setListTransactions }) {
           <option value="saída">Saída</option>
         </select>
 
-        <button type="submit" onClick={() => {}}>
+        <button
+          type="submit"
+          onClick={() => {
+            localStorage.setItem("list", JSON.stringify(listTransactions));
+          }}
+        >
           Registrar
         </button>
       </form>
