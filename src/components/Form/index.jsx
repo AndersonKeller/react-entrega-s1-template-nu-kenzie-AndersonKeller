@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./styles.css";
 export function Form({ listTransactions, setListTransactions }) {
-  console.log(listTransactions);
-
   const [userValue, setUserValue] = useState([]);
   const [userDesc, setUserDesc] = useState([]);
   const [userType, setUserType] = useState([]);
@@ -15,6 +13,7 @@ export function Form({ listTransactions, setListTransactions }) {
             ...listTransactions,
             { value: userValue, description: userDesc, type: userType },
           ]);
+          localStorage.setItem("list", JSON.stringify(listTransactions));
         }}
       >
         <label htmlFor="">Descrição</label>
@@ -49,12 +48,7 @@ export function Form({ listTransactions, setListTransactions }) {
           <option value="saída">Saída</option>
         </select>
 
-        <button
-          type="submit"
-          onClick={() => {
-            console.log(listTransactions);
-          }}
-        >
+        <button type="submit" onClick={() => {}}>
           Registrar
         </button>
       </form>

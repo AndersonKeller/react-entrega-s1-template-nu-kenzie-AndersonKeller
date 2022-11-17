@@ -1,6 +1,5 @@
 import "./styles.css";
 export function TotalMoney({ listTransactions }) {
-  console.log(listTransactions);
   function sumValues(listTransactions) {
     return listTransactions.reduce((acc, value) => {
       return acc + Number(value.value);

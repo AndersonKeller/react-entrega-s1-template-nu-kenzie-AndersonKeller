@@ -1,6 +1,5 @@
 import "./styles.css";
 export function Card({ transaction }) {
-  console.log(transaction);
   return (
     <li className="li-card">
       <p>{transaction.description}</p>
