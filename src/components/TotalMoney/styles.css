@@ -1,0 +1,17 @@
+.total-container {
+  width: 20%;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  margin-top: 2rem;
+  position: absolute;
+  top: 300px;
+}
+.total-container h3 {
+  width: 80%;
+}

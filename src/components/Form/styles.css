@@ -1,0 +1,12 @@
+.container-form {
+  width: 20%;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  height: max-content;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,23 +1,19 @@
 import "./App.css";
 import { useState } from "react";
-import { Card } from "./components/Card";
-import { Form } from "./components/Form";
-import { List } from "./components/List";
-import { TotalMoney } from "./components/TotalMoney";
-function App() {
-  const [listTransaction, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 },
-  ]);
+import { Index } from "./components/Index";
+import { Button } from "./components/Button";
+import { Home } from "./components/Home/home";
 
-  return (
+function App() {
+  const [user, setUser] = useState(false);
+
+  return user ? (
     <div className="App">
-      <header className="App-header">
-        <Form
-          listTransactions={listTransaction}
-          setListTransactions={setListTransactions}
-        />
-      </header>
+      <Home setUser={setUser} />
+    </div>
+  ) : (
+    <div className="App">
+      <Index user={user} setUser={setUser} />
     </div>
   );
 }

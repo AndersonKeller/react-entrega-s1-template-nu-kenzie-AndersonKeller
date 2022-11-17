@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
 .App {
   text-align: center;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -17,7 +22,6 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -35,4 +39,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+button {
+  background-color: #fd377e;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  background-color: #fd377e;
+  color: #fff;
 }
