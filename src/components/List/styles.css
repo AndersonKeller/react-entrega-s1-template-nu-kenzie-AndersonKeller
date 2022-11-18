@@ -21,3 +21,10 @@ ul {
   gap: 2rem;
   align-items: center;
 }
+.li-noCard {
+  width: 100%;
+  height: 100px;
+  background-image: url("../../noCard.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}

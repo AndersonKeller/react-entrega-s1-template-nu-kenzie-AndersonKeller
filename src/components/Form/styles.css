@@ -1,12 +1,46 @@
 .container-form {
-  width: 20%;
-  padding: 1rem;
-  border: 1px solid #e9ecef;
-  border-radius: 4px;
+  width: 30%;
+  padding: 2rem;
+  border: 1px solid var(--color-gray200);
+  border-radius: 0.25rem;
   height: max-content;
+  text-align: left;
 }
 form {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+label {
+  font-size: var(--title4);
+  font-weight: 400;
+  color: var(--color-gray400);
+}
+input,
+select {
+  padding: 0.75rem 1rem;
+  background-color: var(--color-gray100);
+  border: none;
+  border-radius: 0.5rem;
+}
+input::placeholder,
+select::placeholder {
+  color: var(--color-gray300);
+}
+#value::placeholder {
+  padding-left: 4rem;
+}
+#description {
+  width: 100%;
+}
+.div-values,
+.div-types {
+  width: 40%;
+  display: flex;
   flex-direction: column;
+}
+form button {
   width: 100%;
 }

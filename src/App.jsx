@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { Index } from "./components/Index";
-import { Button } from "./components/Button";
+
 import { Home } from "./components/Home/home";
 
 function App() {

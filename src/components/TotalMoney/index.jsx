@@ -8,7 +8,7 @@ export function TotalMoney({ listTransactions }) {
   return (
     <div className="total-container">
       <h3>Valor Total</h3>
-      <p>{sumValues(listTransactions)}</p>
+      <p className="p-total">$ {sumValues(listTransactions)}</p>
       <p>O valor se refere ao saldo</p>
     </div>
   );

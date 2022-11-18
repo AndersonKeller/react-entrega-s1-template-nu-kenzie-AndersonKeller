@@ -5,6 +5,8 @@
   flex-wrap: wrap;
   gap: 2rem;
   position: relative;
+  margin-top: 1rem;
+  justify-content: space-between;
 }
 .div-header {
   display: flex;
@@ -13,14 +15,12 @@
   align-items: center;
 }
 .div-ul {
-  list-style: none;
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 1.5rem;
-  padding: 1.5rem;
-  box-sizing: border-box;
+  padding: 1.5rem 0;
 }
 ul {
   width: 100%;
@@ -28,4 +28,9 @@ ul {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+}
+.btn-filters {
+  background-color: var(--color-gray200);
+  color: var(--color-gray400);
+  width: max-content;
 }

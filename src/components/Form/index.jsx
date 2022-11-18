@@ -17,6 +17,7 @@ export function Form({ listTransactions, setListTransactions }) {
       >
         <label htmlFor="">Descrição</label>
         <input
+          required
           type="text"
           id="description"
           placeholder="Descrição do gasto"
@@ -25,27 +26,36 @@ export function Form({ listTransactions, setListTransactions }) {
             setUserDesc(event.target.value);
           }}
         />
-        <label htmlFor="">Valor</label>
-        <input
-          type="text"
-          id="value"
-          placeholder="Digite o valor"
-          value={userValue}
-          onChange={(event) => {
-            setUserValue(event.target.value);
-          }}
-        />
-        <label htmlFor="">Tipo de valor</label>
-        <select
-          name=""
-          id="type"
-          onChange={(event) => {
-            setUserType(event.target.value);
-          }}
-        >
-          <option value="entrada">Entrada</option>
-          <option value="saída">Saída</option>
-        </select>
+        <div className="div-values">
+          <label htmlFor="">Valor</label>
+          <input
+            required
+            type="text"
+            id="value"
+            placeholder="R$"
+            value={userValue}
+            onChange={(event) => {
+              setUserValue(event.target.value);
+            }}
+          />
+        </div>
+        <div className="div-types">
+          <label htmlFor="">Tipo de valor</label>
+          <select
+            name=""
+            id="type"
+            onChange={(event) => {
+              setUserType(event.target.value);
+            }}
+          >
+            <option id="type" value="entrada">
+              Entrada
+            </option>
+            <option id="type" value="saída">
+              Saída
+            </option>
+          </select>
+        </div>
 
         <button
           type="submit"

@@ -1,10 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+:root {
+  --color-brand100: #fd377e;
+  --color-brand200: #e34981;
+  --color-green100: #03b898;
+
+  --color-gray400: #212529;
+  --color-gray300: #868e96;
+  --color-gray200: #e9ecef;
+  --color-gray100: #f8f9fa;
+  --fix-white: #ffffff;
+
+  --title1: 1.75rem;
+  --title2: 1.5rem;
+  --title3: 1.25rem;
+  --title4: 0.75rem;
+
+  --font-head: 1rem;
+}
 .App {
   text-align: center;
   font-family: "Nunito", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 .App-logo {
@@ -25,11 +46,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  color: var(--color-gray100);
 }
 
 @keyframes App-logo-spin {
@@ -41,14 +58,16 @@
   }
 }
 button {
-  background-color: #fd377e;
-  color: #fff;
+  background-color: var(--color-brand100);
+  color: var(--color-gray100);
   border-radius: 0.5rem;
-  padding: 0.5rem 2rem;
+  padding: 0.75rem 2rem;
   cursor: pointer;
   border: none;
+  font-weight: 500;
+  font-size: var(--font-head);
 }
 button:hover {
-  background-color: #fd377e;
-  color: #fff;
+  background-color: var(--color-brand100);
+  color: var(--color-gray100);
 }

@@ -22,8 +22,11 @@ export function Home({ setUser }) {
         <div className="div-ul">
           <div className="div-header">
             <h3>Resumo financeiro</h3>
-            <button onClick={() => setFilterList([])}>Todos</button>
+            <button className="btn-filters" onClick={() => setFilterList([])}>
+              Todos
+            </button>
             <button
+              className="btn-filters"
               onClick={() =>
                 setFilterList([
                   ...listTransaction.filter((el) => el.type === "entrada"),
@@ -33,6 +36,7 @@ export function Home({ setUser }) {
               Entradas
             </button>
             <button
+              className="btn-filters"
               onClick={() =>
                 setFilterList([
                   ...listTransaction.filter((el) => el.type === "saída"),
@@ -43,12 +47,14 @@ export function Home({ setUser }) {
             </button>
           </div>
           <ul>
-            {
+            {listTransaction.length ? (
               <List
                 list={filterList.length ? filterList : listTransaction}
                 setListTransaction={setListTransactions}
               />
-            }
+            ) : (
+              <List list={[]} />
+            )}
           </ul>
         </div>
 

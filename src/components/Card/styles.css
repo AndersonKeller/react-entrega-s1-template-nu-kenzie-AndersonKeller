@@ -6,16 +6,25 @@
   border-radius: 0.5rem;
   border: none;
   padding: 1rem;
-  background-color: #f8f9fa;
+  background-color: var(--color-gray100);
   flex-wrap: wrap;
+  cursor: pointer;
+}
+.li-card:hover {
+  background-color: var(--fix-white);
 }
 .btn-trash {
+  background-color: var(--color-gray100);
   background-image: url("../../trash.png");
   background-position: center;
   background-repeat: no-repeat;
   padding: 0.5rem;
   width: 1.5rem;
   height: 1.5rem;
+}
+.btn-trash:hover {
+  background-image: url("../../trashwhite.png");
+  background-color: var(--color-gray400);
 }
 .div-type {
   width: 100%;
