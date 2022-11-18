@@ -71,3 +71,54 @@ button:hover {
   background-color: var(--color-brand100);
   color: var(--color-gray100);
 }
+.container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  margin-top: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.container-form {
+  width: 30%;
+  padding: 2rem;
+  border: 1px solid var(--color-gray200);
+  border-radius: 0.25rem;
+  height: max-content;
+  text-align: left;
+}
+.total-container {
+  width: 30%;
+  padding: 1rem;
+  border: 1px solid var(--color-gray200);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  margin-top: 2rem;
+  position: absolute;
+  top: 300px;
+  gap: 2rem;
+}
+@media (max-width: 1232px) {
+  .container {
+    width: 100vw;
+    flex-direction: column;
+  }
+  .container-form {
+    width: 60%;
+  }
+  .total-container {
+    top: -18px;
+    right: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .total-container {
+    right: 30px;
+  }
+}
