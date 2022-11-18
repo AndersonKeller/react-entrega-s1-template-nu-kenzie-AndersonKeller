@@ -1,11 +1,12 @@
 .section-menu {
-  width: 32%;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 2rem;
+
+  height: max-content;
+  gap: 1rem;
+  width: 70%;
 }
 .section-img {
   height: 100vh;
@@ -14,6 +15,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  display: none;
 }
 .section-menu h2 {
   width: 50%;
@@ -45,16 +47,15 @@
   font-weight: 400;
   text-align: left;
 }
-@media (max-width: 849px) {
+@media (min-width: 746px) {
   .section-menu {
-    height: max-content;
-    gap: 1rem;
     width: 45%;
-  }
-  .section-menu h2 {
-    width: 100%;
+    max-width: 600px;
   }
   .btn-index {
-    width: 100%;
+    max-width: 200px;
+  }
+  .section-img {
+    display: flex;
   }
 }
