@@ -8,7 +8,7 @@ import "./styles.css";
 export function Home({ setUser }) {
   const [listTransaction, setListTransactions] = useState([
     { description: "Salário recebido", type: "entrada", value: 2500, id: 0 },
-    { description: "Conta de luz", type: "saída", value: -150, id: 1 },
+    { description: "Conta de luz", type: "saída", value: 150, id: 1 },
   ]);
   const [filterList, setFilterList] = useState([]);
   return (

@@ -15,7 +15,6 @@ export function Index({ user, setUser }) {
         </button>
       </section>
       <section className="section-img"></section>
-      {console.log(user)}
     </div>
   );
 }
