@@ -58,7 +58,11 @@ export function Home({ setUser }) {
           </ul>
         </div>
 
-        <TotalMoney listTransactions={listTransaction} />
+        {listTransaction.length ? (
+          <TotalMoney listTransactions={listTransaction} />
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

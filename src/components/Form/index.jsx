@@ -9,10 +9,16 @@ export function Form({ listTransactions, setListTransactions }) {
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          setListTransactions([
-            ...listTransactions,
-            { value: userValue, description: userDesc, type: userType },
-          ]);
+          console.log(userType);
+          userType.length
+            ? setListTransactions([
+                ...listTransactions,
+                { value: userValue, description: userDesc, type: userType },
+              ])
+            : setListTransactions([
+                ...listTransactions,
+                { value: userValue, description: userDesc, type: "entrada" },
+              ]);
         }}
       >
         <label htmlFor="">Descrição</label>
@@ -42,29 +48,18 @@ export function Form({ listTransactions, setListTransactions }) {
         <div className="div-types">
           <label htmlFor="">Tipo de valor</label>
           <select
-            name=""
+            name="type"
             id="type"
             onChange={(event) => {
               setUserType(event.target.value);
             }}
           >
-            <option id="type" value="entrada">
-              Entrada
-            </option>
-            <option id="type" value="saída">
-              Saída
-            </option>
+            <option value="entrada">Entrada</option>
+            <option value="saída">Saída</option>
           </select>
         </div>
 
-        <button
-          type="submit"
-          onClick={() => {
-            localStorage.setItem("list", JSON.stringify(listTransactions));
-          }}
-        >
-          Registrar
-        </button>
+        <button type="submit">Registrar</button>
       </form>
     </div>
   );
