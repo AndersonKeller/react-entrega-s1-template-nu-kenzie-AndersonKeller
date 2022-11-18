@@ -10,7 +10,7 @@ export function Home({ setUser }) {
     { description: "Salário recebido", type: "entrada", value: 2500 },
     { description: "Conta de luz", type: "saída", value: -150 },
   ]);
-  // localStorage.setItem("list", JSON.stringify(listTransaction));
+  const [filterList, setFilterList] = useState([]);
   return (
     <div>
       <Header setUser={setUser} />
@@ -22,38 +22,22 @@ export function Home({ setUser }) {
         <div className="div-ul">
           <div className="div-header">
             <h3>Resumo financeiro</h3>
+            <button onClick={() => setFilterList([])}>Todos</button>
             <button
               onClick={() =>
-                setListTransactions(JSON.parse(localStorage.getItem("list")))
+                setFilterList([
+                  ...listTransaction.filter((el) => el.type === "entrada"),
+                ])
               }
-            >
-              Todos
-            </button>
-            <button
-              onClick={() => (
-                <List
-                  setListTransaction={setListTransactions}
-                  list={setListTransactions(
-                    JSON.parse(localStorage.getItem("list")).filter((el) => {
-                      return el.type === "entrada";
-                    })
-                  )}
-                />
-              )}
             >
               Entradas
             </button>
             <button
-              onClick={() => (
-                <List
-                  setListTransaction={setListTransactions}
-                  list={setListTransactions(
-                    JSON.parse(localStorage.getItem("list")).filter((el) => {
-                      return el.type === "saída";
-                    })
-                  )}
-                />
-              )}
+              onClick={() =>
+                setFilterList([
+                  ...listTransaction.filter((el) => el.type === "saída"),
+                ])
+              }
             >
               Saídas
             </button>
@@ -61,7 +45,7 @@ export function Home({ setUser }) {
           <ul>
             {
               <List
-                list={listTransaction}
+                list={filterList.length ? filterList : listTransaction}
                 setListTransaction={setListTransactions}
               />
             }
