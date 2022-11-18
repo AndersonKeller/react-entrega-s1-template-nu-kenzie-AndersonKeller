@@ -1,0 +1,43 @@
+.li-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1rem;
+  background-color: var(--color-gray100);
+  flex-wrap: wrap;
+  cursor: pointer;
+  gap: 1rem;
+}
+.li-card p {
+  font-size: var(--title3);
+  color: var(--color-gray400);
+  font-weight: 700;
+}
+.li-card span {
+  font-size: var(--title4);
+  font-weight: 400;
+  color: var(--color-gray400);
+}
+.li-card:hover {
+  background-color: var(--fix-white);
+}
+.btn-trash {
+  background-color: var(--color-gray100);
+  background-image: url("../../trash.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.btn-trash:hover {
+  background-image: url("../../trashwhite.png");
+  background-color: var(--color-gray400);
+}
+.div-type {
+  width: 100%;
+  text-align: left;
+}
