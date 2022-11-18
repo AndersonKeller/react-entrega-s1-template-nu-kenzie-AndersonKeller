@@ -13,11 +13,21 @@ export function Form({ listTransactions, setListTransactions }) {
           userType.length
             ? setListTransactions([
                 ...listTransactions,
-                { value: userValue, description: userDesc, type: userType },
+                {
+                  value: userValue,
+                  description: userDesc,
+                  type: userType,
+                  id: listTransactions.length - 1,
+                },
               ])
             : setListTransactions([
                 ...listTransactions,
-                { value: userValue, description: userDesc, type: "entrada" },
+                {
+                  value: userValue,
+                  description: userDesc,
+                  type: "entrada",
+                  id: listTransactions.length - 1,
+                },
               ]);
         }}
       >

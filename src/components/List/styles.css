@@ -22,6 +22,10 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.no-card-h3 {
+  font-size: var(--title2);
+  font-weight: 700;
+}
 @media (max-width: 1038px) {
   .div-ul {
     width: 90%;

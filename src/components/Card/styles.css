@@ -9,6 +9,17 @@
   background-color: var(--color-gray100);
   flex-wrap: wrap;
   cursor: pointer;
+  gap: 1rem;
+}
+.li-card p {
+  font-size: var(--title3);
+  color: var(--color-gray400);
+  font-weight: 700;
+}
+.li-card span {
+  font-size: var(--title4);
+  font-weight: 400;
+  color: var(--color-gray400);
 }
 .li-card:hover {
   background-color: var(--fix-white);
