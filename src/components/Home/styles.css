@@ -8,5 +8,6 @@ ul {
 .btn-filters {
   background-color: var(--color-gray200);
   color: var(--color-gray400);
-  width: max-content;
+  width: 100px;
+  padding: 1rem;
 }

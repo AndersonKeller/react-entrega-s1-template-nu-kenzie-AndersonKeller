@@ -15,36 +15,45 @@ export function Home({ setUser }) {
     <div>
       <Header setUser={setUser} />
       <div className="container">
-        <Form
-          listTransactions={listTransaction}
-          setListTransactions={setListTransactions}
-        />
+        <section className="section-forms">
+          <Form
+            listTransactions={listTransaction}
+            setListTransactions={setListTransactions}
+          />
+          {listTransaction.length ? (
+            <TotalMoney listTransactions={listTransaction} />
+          ) : (
+            ""
+          )}
+        </section>
         <div className="div-ul">
           <div className="div-header">
             <h3>Resumo financeiro</h3>
-            <button className="btn-filters" onClick={() => setFilterList([])}>
-              Todos
-            </button>
-            <button
-              className="btn-filters"
-              onClick={() =>
-                setFilterList([
-                  ...listTransaction.filter((el) => el.type === "entrada"),
-                ])
-              }
-            >
-              Entradas
-            </button>
-            <button
-              className="btn-filters"
-              onClick={() =>
-                setFilterList([
-                  ...listTransaction.filter((el) => el.type === "saída"),
-                ])
-              }
-            >
-              Saídas
-            </button>
+            <div className="div-btns-header">
+              <button className="btn-filters" onClick={() => setFilterList([])}>
+                Todos
+              </button>
+              <button
+                className="btn-filters"
+                onClick={() =>
+                  setFilterList([
+                    ...listTransaction.filter((el) => el.type === "entrada"),
+                  ])
+                }
+              >
+                Entradas
+              </button>
+              <button
+                className="btn-filters"
+                onClick={() =>
+                  setFilterList([
+                    ...listTransaction.filter((el) => el.type === "saída"),
+                  ])
+                }
+              >
+                Saídas
+              </button>
+            </div>
           </div>
           <ul>
             {listTransaction.length ? (
@@ -58,12 +67,6 @@ export function Home({ setUser }) {
             )}
           </ul>
         </div>
-
-        {listTransaction.length ? (
-          <TotalMoney listTransactions={listTransaction} />
-        ) : (
-          ""
-        )}
       </div>
     </div>
   );

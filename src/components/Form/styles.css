@@ -36,3 +36,6 @@ select::placeholder {
 form button {
   width: 100%;
 }
+.section-forms {
+  min-width: 350px;
+}
