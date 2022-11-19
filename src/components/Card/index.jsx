@@ -2,11 +2,16 @@ import "./styles.css";
 export function Card({
   transaction,
   index,
+  colorType,
   listTransaction = [],
   setListTransactions,
 }) {
   return (
     <li className="li-card">
+      <div
+        className="div-type-span"
+        style={{ backgroundColor: `${colorType}` }}
+      ></div>
       <p>{transaction.description}</p>
       <span>R$ {transaction.value}</span>
       <button
