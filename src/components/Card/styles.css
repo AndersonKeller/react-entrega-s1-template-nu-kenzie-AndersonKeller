@@ -11,6 +11,7 @@
   cursor: pointer;
   gap: 1rem;
   min-width: 350px;
+  position: relative;
 }
 .li-card p {
   font-size: var(--title3);
@@ -42,4 +43,13 @@
 .div-type {
   width: 100%;
   text-align: left;
+}
+.div-type-span {
+  height: 95px;
+  width: 8px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px 0 0 8px;
 }
